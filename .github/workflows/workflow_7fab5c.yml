@@ -1,0 +1,12 @@
+name: Automated Build
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  test-pipeline:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: Update cache
+        run: echo "workspace ready"
